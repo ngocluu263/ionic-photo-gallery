@@ -32,6 +32,11 @@
                             saveUserAndToken(response.token);
                         });
                 },
+                edit: function(params) {
+                    return Restangular
+                        .all('auth/edit')
+                        .put(params);
+                },
                 signin: function(params) {
                     return Restangular
                         .all('auth/signin')
