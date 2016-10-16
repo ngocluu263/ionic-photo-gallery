@@ -50,7 +50,7 @@ var UserSchema = new mongoose.Schema({
     },
     avatar: {
         type: String,
-        default: 'https://raw.githubusercontent.com/martinmicunda/employee-scheduling-ui/master/src/images/anonymous.jpg?123456'
+        default: ''
     },
     provider: {
         type: String,
