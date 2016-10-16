@@ -23,7 +23,7 @@ User.find({}).remove(function() {
             name: 'Martin Micunda',
             email: 'martinmicunda@test.com',
             password: 'test',
-            avatar: 'https://avatars2.githubusercontent.com/u/1643606?v=3'
+            avatar: ''
         }, {
             _id: testUserId,
             provider: 'local',
