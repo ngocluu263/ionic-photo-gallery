@@ -29,7 +29,7 @@
                 // save user profile details to $rootScope
                 $rootScope.me = Authentication.getCurrentUser();
 
-                $state.go('app.gallery', { userId: $rootScope.me._id});
+                $state.go('app.users', { userId: $rootScope.me._id});
             }, function(error) {
                 $cordovaVibration.vibrate(100);
                 console.log('error ' + error);
