@@ -15,7 +15,7 @@ config.environment = process.env.NODE_ENV || 'development';
 config.uploadFilesInMemory = process.env.UPLOAD_FILES_IN_MEMORY || false;
 
 // Populate the DB with sample data
-config.seedDB = true;
+config.seedDB = false;
 
 // Token settings
 config.token = {
