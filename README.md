@@ -1,3 +1,6 @@
+
+
+
 Ionic Photo Gallery
 ======================
  
@@ -270,3 +273,9 @@ If you wish to destroy the `default` virtual boxe to make sure you have a fresh 
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
+
+fix : 
+
+Application Error : There was a network Error - ionic - Ionic
+
+ionic plugin add https://github.com/apache/cordova-plugin-whitelist.git
