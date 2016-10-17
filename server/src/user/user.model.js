@@ -50,7 +50,7 @@ var UserSchema = new mongoose.Schema({
     },
     avatar: {
         type: String,
-        default: ''
+        default: '/img/ionic.png'
     },
     provider: {
         type: String,

@@ -18,14 +18,14 @@
      *
      * @ngInject
      */
-    function userRoute($stateProvider) {
-        $stateProvider
-            .state('app.edit', {
-                url: '/edit/:userId',
+    function editRoute($stateProvider) {
+        $stateProvider.state('app.edit',
+            {
+                url: '/users/:userId',
                 views: {
                     'menuContent': {
-                        templateUrl: 'js/routes/edit/edit.html',
-                        controller: 'EditCtrl as vm'
+                        templateUrl: 'js/routes/user/user.html',
+                        controller: 'UserCtrl as vm'
                     }
                 },
                 resolve: {/* @ngInject */
@@ -41,7 +41,7 @@
     }
 
     angular
-        .module('app.user')
-        .config(userRoute);
+        .module('app.edit')
+        .config(editRoute);
 
 })();
