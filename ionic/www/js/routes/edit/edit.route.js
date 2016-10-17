@@ -24,8 +24,8 @@
                 url: '/users/:userId',
                 views: {
                     'menuContent': {
-                        templateUrl: 'js/routes/user/user.html',
-                        controller: 'UserCtrl as vm'
+                        templateUrl: 'js/routes/edit/edit.html',
+                        controller: 'EditCtrl as vm'
                     }
                 },
                 resolve: {/* @ngInject */
