@@ -21,14 +21,6 @@
      */
     function EditCtrl($rootScope, user) {
         var vm = this;
-
-        vm.goHome = function() {
-            $location.path('/');
-        };
-
-        vm.goToSignin = function(){
-            $state.go('signin');
-        };
     }
 
     angular
