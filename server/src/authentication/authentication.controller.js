@@ -110,6 +110,40 @@ function signup(req, res) {
     });
 }
 
+
+/**
+ * Create new user and login user in.
+ *
+ * @param {Object} req The request object
+ * @param {Object} res The response object
+ * @returns {Object} the new created JWT token
+ * @api public
+ */
+function edit(req, res) {
+    var email = req.body.email || '';
+    var password = req.body.password || '';
+
+    if (email == '' || password == '') {
+        return res.sendStatus(400);
+    }
+
+    // Init Variables
+    var user = new User(req.body);
+    // Add missing user fields
+    user.provider = 'local';
+
+    // Then update the user
+    user.save(function(err, user) {
+        if (err) {
+            logger.error(err.message);
+            return res.status(400).send(err);
+        } else {
+            // Remove sensitive data before login
+            user.password = email;
+            user.salt = password;
+        }
+    });
+}
 /**
  * Middleware to verify the token and attaches the user object
  * to the request if authenticated.
@@ -136,5 +170,6 @@ module.exports = {
     signin: signin,
     signout: signout,
     signup: signup,
+    edit: edit,
     isAuthenticated: isAuthenticated
 };
