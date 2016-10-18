@@ -35,7 +35,7 @@
                 edit: function(params) {
                     return Restangular
                         .all('auth/edit')
-                        .put(params);
+                        .post(params);
                 },
                 signin: function(params) {
                     return Restangular
