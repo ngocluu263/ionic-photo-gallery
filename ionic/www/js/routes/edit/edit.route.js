@@ -21,7 +21,7 @@
     function editRoute($stateProvider) {
         $stateProvider.state('app.edit',
             {
-                url: '/users/:userId',
+                url: '/edit',
                 views: {
                     'menuContent': {
                         templateUrl: 'js/routes/edit/edit.html',
