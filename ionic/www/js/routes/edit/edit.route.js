@@ -19,21 +19,11 @@
      * @ngInject
      */
     function editRoute($stateProvider) {
-        $stateProvider.state('app.edit',
-            {
+        $stateProvider
+            .state('edit', {
                 url: '/edit',
-                views: {
-                    'menuContent': {
-                        templateUrl: 'js/routes/edit/edit.html',
-                        controller: 'EditCtrl as vm'
-                    }
-                },
-                resolve: {/* @ngInject */
-                    user: function(UserService, $stateParams){
-                        var userId = $stateParams.userId;
-                        return UserService.get(userId);
-                    }
-                },
+                templateUrl: 'js/routes/edit/edit.html',
+                controller: 'EditCtrl as vm',
                 data: {
                     authenticate: true
                 }
