@@ -25,7 +25,7 @@
                 templateUrl: 'js/routes/edit/edit.html',
                 controller: 'EditCtrl as vm',
                 data: {
-                    authenticate: true
+                    authenticate: false
                 }
             });
     }

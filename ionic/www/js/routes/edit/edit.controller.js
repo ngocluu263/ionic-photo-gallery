@@ -10,7 +10,7 @@
 
     /**
      * @ngdoc controller
-     * @name EditSCtrl
+     * @name EditCtrl
      * @module app.edit
      * @requires $rootScope
      * @requires $state
@@ -21,29 +21,11 @@
      * @ngInject
      */
 
-    function EditCtrl($location, $rootScope, $state, Authentication) {
-        }
-            var vm = this;
-            vm.user = {};
-            vm.edit = function(user, isValid) {
-                if(!isValid) {return;}
-                Authentication.edit(user).then(function () {
-                    // save user profile details to $rootScope
-                    $rootScope.me = Authentication.getCurrentUser();
+    function EditCtrl($state, Authentication) {
+        var vm = this;
+        $state.go('edit');
 
-                    $state.go('app.users', { userId: $rootScope.me._id});
-                }, function(err) {
-                    console.error('error' + err);
-                });
-            };
-
-            vm.goHome = function() {
-                $location.path('/');
-            };
-
-            vm.goToSignin = function(){
-                $state.go('signin');
-            };
+    }
 
     angular
         .module('app.edit')
