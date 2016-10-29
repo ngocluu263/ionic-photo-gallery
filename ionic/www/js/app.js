@@ -28,8 +28,7 @@
         'app.signup',
         'app.signin',
         'app.user',
-        'app.users',
-        'app.edit'
+        'app.users'
         //'app.gallery',
         //'app.galleries'
     ]);

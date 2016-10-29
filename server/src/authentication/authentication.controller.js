@@ -170,6 +170,5 @@ module.exports = {
     signin: signin,
     signout: signout,
     signup: signup,
-    edit: edit,
     isAuthenticated: isAuthenticated
 };
