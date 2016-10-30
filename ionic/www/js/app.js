@@ -28,9 +28,9 @@
         'app.signup',
         'app.signin',
         'app.user',
-        'app.users'
-        //'app.gallery',
-        //'app.galleries'
+        'app.users',
+        'app.gallery',
+        'app.galleries'
     ]);
 
 })();

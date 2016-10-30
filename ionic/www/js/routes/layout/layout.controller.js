@@ -11,7 +11,7 @@
     /**
      * @ngdoc controller
      * @name LayoutCtrl
-     * @module app.layout
+     * @module app.gallery
      * @requires $state
      * @requires Authentication
      * @description
@@ -31,6 +31,9 @@
             });
         };
 
+        vm.launchMartinMicundaPage = function(){
+            window.open("http://google.com", "_blank", "closebuttoncaption=Done,location=no");
+        };
     }
 
     angular
